@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.top-mv {
+  height: 100vh;
+  width: 100%;
+}
+
+.top-mv__inner {
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.top-mv__slider,
+.swiper-slide picture,
+.swiper-slide img {
+  height: inherit;
+}
+
+.swiper-slide img {
+  object-fit: cover;
+}
+
+.top-mv__title {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-mv__title-main,
+.top-mv__title-sub {
+  color: $white;
+  font-weight: $normal;
+}
+
+.top-mv__title-main {
+  font-family: $lato;
+  font-size: rem(40);
+  letter-spacing: 0.54em;
+  @include mq("md") {
+    font-size: rem(80);
+    line-height: 1.25;
+  }
+}
+
+.top-mv__title-sub {
+  font-size: rem(20);
+  text-align: center;
+}

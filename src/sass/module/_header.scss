@@ -1,0 +1,91 @@
+@use "global" as *;
+
+.header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: rem(80);
+  background-color: rgba($color: $black, $alpha: 0.68);
+  @include mq("md") {
+    height: rem(90);
+  }
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  padding: 0 rem(40) 0 rem(15);
+  @include mq("md") {
+    padding-left: rem(40);
+  }
+}
+
+.header__name {
+  margin-right: auto;
+  position: relative;
+  z-index: 5001;
+}
+
+.header__logo {
+  width: rem(102);
+  @include mq("md") {
+    width: rem(133);
+  }
+}
+
+.header__nav {
+  height: inherit;
+}
+
+.header__items {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+.header__item {
+  height: inherit;
+}
+
+.header__item:not(:first-child) {
+  margin-left: rem(40);
+}
+
+.header__link {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: inherit;
+  color: $white;
+  font-size: rem(18);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1;
+  position: relative;
+  &:hover::after {
+    transform: scale(1, 1);
+  }
+}
+
+.header__link::after {
+  content: '';
+  position: absolute;
+  bottom: rem(25);
+  left: 0;
+  width: 100%;
+  height: rem(1);
+  background-color: $white;
+  transition: all .3s;
+  transform: scale(0, 1);
+  transform-origin: center top;
+}
+
+.header__link span {
+  font-size: rem(10);
+  line-height: 1.5;
+  margin-top: rem(4);
+}

@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.button {
+  color: #FFF;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 1.571;
+  display: inline-block;
+  width: rem(202);
+  padding: rem(16) rem(40);
+  background-color: $green;
+  border: rem(1) solid $green;
+  position: relative;
+  background-image: url(../images/common/arrow-icon1.svg);
+  background-repeat: no-repeat;
+  background-size: rem(40) rem(6);
+  background-position: top rem(22) right rem(40);
+  transition: all 0.3s;
+  
+  &:hover {
+    background-color: #fff;
+    color: $green;
+    background-image: url(../images/common/arrow-icon2.svg);
+  }
+}
+
+.button::before {
+  content: '';
+  border: rem(1) solid $green;
+  position: absolute;
+  top: rem(4);
+  right: rem(-4);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.menu__title {
+  color: $white;
+  font-weight: $bold;
+  line-height: 1.125;
+  position: relative;
+}
+
+.menu__title::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: rem(-22);
+  width: rem(18);
+  height: rem(18);
+  background-image: url(../images/common/hitode.svg);
+}
+
+.menu__link {
+  display: inline-block;
+  color: $white;
+  font-weight: $normal;
+  line-height: 1.125;
+  margin-top: rem(24);
+}

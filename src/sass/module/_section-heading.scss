@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.section-heading {
+  display: inline-block;
+}
+
+.section-heading__main {
+  color: $black;
+  font-size: rem(32);
+  font-weight: $normal;
+  line-height: 1.25;
+  @include mq("md") {
+    font-size: rem(40);
+    line-height: 1;
+  }
+}
+
+.section-heading__main span {
+  color: $green;
+}
+
+.section-heading__sub {
+  color: $green;
+  text-align: center;
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: 1.5;
+  margin-top: rem(4);
+  @include mq("md") {
+    margin-top: rem(8);
+  }
+}

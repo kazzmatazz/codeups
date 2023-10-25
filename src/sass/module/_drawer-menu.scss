@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.drawer-menu {
+  position: absolute;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  background-color: $green;
+}
+
+.drawer-menu__inner {
+  display: flex;
+  margin-top: rem(104);
+  width: 100%;
+  height: inherit;
+  padding: 0 rem(15);
+}
+
+.drawer-menu__right {
+  margin-left: rem(7);
+}
+
+.drawer-menu__items {
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer-menu__item {
+  display: flex;
+  flex-direction: column;
+  padding-left: rem(22);
+}
+
+.drawer-menu__item:not(:first-child) {
+  margin-top: rem(40);
+}

@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .section-heading {
-  display: inline-block;
+  text-align: center;
 }
 
 .section-heading__main {
@@ -21,7 +21,6 @@
 
 .section-heading__sub {
   color: $green;
-  text-align: center;
   font-size: rem(12);
   font-weight: $normal;
   line-height: 1.5;

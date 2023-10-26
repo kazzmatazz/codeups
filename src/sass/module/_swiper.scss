@@ -1,0 +1,53 @@
+@use "global" as *;
+
+.swiper-slide {
+  width: rem(280);
+  
+  @include mq("md") {
+    width: rem(333);
+  }
+}
+
+.swiper-button-next {
+  display: none;
+
+  @include mq("md") {
+    display: block;
+    top: rem(22);
+    right: rem(180);
+  }
+}
+
+.swiper-button-prev {
+  display: none;
+
+  @include mq("md") {
+    display: block;
+    top: rem(22);
+    left: calc(100% - rem(420));
+  }
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  background-image: url(../images/common/swiper-button-next.svg);
+  width: rem(80);
+  height: rem(80);
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-nex  {
+  background-image: url(../images/common/swiper-button-prev.svg);
+  width: rem(80);
+  height: rem(80);
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content: none;
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  content: none;
+}
+
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+  opacity: 1;
+}

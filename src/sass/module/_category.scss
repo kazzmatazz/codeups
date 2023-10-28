@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.category {
+  display: inline-block;
+  color: $green;
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: 1.833;
+  padding: rem(4) rem(12);
+  border: 1px solid $green;
+}

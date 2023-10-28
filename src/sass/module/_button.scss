@@ -14,7 +14,7 @@
   background-image: url(../images/common/arrow-icon1.svg);
   background-repeat: no-repeat;
   background-size: rem(40) rem(6);
-  background-position: top rem(22) right rem(40);
+  background-position: top rem(22) right rem(20);
   transition: all 0.3s;
   
   &:hover {
@@ -28,9 +28,9 @@
   content: '';
   border: rem(1) solid $green;
   position: absolute;
-  top: rem(4);
+  bottom: rem(-4);
   right: rem(-4);
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 1;
 }

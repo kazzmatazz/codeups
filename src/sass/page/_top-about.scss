@@ -1,10 +1,10 @@
 @use "global" as *;
 
 .top-about {
-  padding: rem(80) 0 rem(70);
+  padding-bottom: rem(70);
   position: relative;
   @include mq("md") {
-    padding: rem(140) 0 rem(164);
+    padding-bottom: rem(164);
   }
 }
 

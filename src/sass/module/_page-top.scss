@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.page-top {
+  position: fixed;
+  z-index: 9000;
+  right: 15px;
+  bottom: 15px;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  border: 1px solid $green;
+  border-radius: 50%;
+  @include mq("md") {
+    right: 20px;
+    bottom: 20px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.page-top::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: rem(6);
+  height: rem(28);
+  border-top: 1px solid $green;
+  border-right: 1px solid $green;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include mq("md") {
+    width: rem(6);
+    height: rem(40);
+  }
+}
+

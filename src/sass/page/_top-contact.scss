@@ -1,0 +1,137 @@
+@use "global" as *;
+
+.top-contact {
+  padding: rem(80) 0 rem(100);
+  position: relative;
+  @include mq("md") {
+    padding: rem(140) 0 rem(160);
+  }
+}
+
+.top-contact::after {
+  content: "";
+  position: absolute;
+  top: rem(54);
+  right: rem(15);
+  background-image: url(../images/common/top-price-group.svg);
+  background-size: cover;
+  width: rem(109);
+  height: rem(50);
+  @include mq("md") {
+    top: rem(100);
+    right: rem(50);
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.top-contact__container {
+  @include mq("md") {
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    padding: rem(80) rem(112) rem(80) rem(50);
+  }
+}
+
+.top-contact__flex {
+  @include mq("md") {
+    display: flex;
+  }
+}
+
+.top-contact__contents {
+  padding: 0 rem(25);
+  @include mq("md") {
+    width: 56.9%;
+    padding: 0;
+    padding-right: rem(84);
+    border-right: 1px solid $green;
+  }
+}
+
+.top-contact__title {
+  padding-bottom: rem(8);
+  border-bottom: rem(1) solid $green;
+}
+
+.top-contact__logo {
+  width: rem(174);
+  margin: 0 auto;
+}
+
+.top-contact__content {
+  margin-top: rem(16);
+  @include mq("md") {
+    margin-top: rem(24);
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.top-contact__info {
+  @include mq("md") {
+    width: 33.2%;
+  }
+}
+
+.top-contact__info-text {
+  text-align: center;
+  color: $black;
+  font-weight: $normal;
+  font-family: $noto;
+  @include mq("md") {
+    text-align: left;
+  }
+}
+
+.top-contact__info-text:not(:first-child) {
+  margin-top: rem(4);
+  @include mq("md") {
+    margin-top: 0;
+  }
+}
+
+.top-contact__map {
+  margin-top: rem(16);
+  width: 100%;
+  height: rem(160);
+  @include mq("md") {
+    width: 62%;
+    margin-top: 0;
+  }
+}
+
+.top-contact__map iframe {
+  aspect-ratio: 59 / 32;
+  height: 100%;
+  width: 100%;
+}
+
+.top-contact__contact {
+  padding: 0 rem(15);
+  margin-top: rem(40);
+  @include mq("md") {
+    width: 29.2%;
+    padding: 0;
+    margin-top: 0;
+    margin-left: rem(81);
+    padding-top: rem(20);
+  }
+}
+
+.top-contact__heading .section-heading__main {
+  font-size: rem(80);
+  line-height: 1;
+}
+
+.top-contact__text {
+  margin-top: rem(8);
+  color: $green;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 1.286;
+}
+
+.top-contact__button {
+  text-align: center;
+  margin-top: rem(40);
+}

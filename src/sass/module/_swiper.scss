@@ -1,20 +1,12 @@
 @use "global" as *;
 
-.swiper-slide {
-  width: rem(280);
-  
-  @include mq("md") {
-    width: rem(333);
-  }
-}
-
 .swiper-button-next {
   display: none;
 
   @include mq("md") {
     display: block;
     top: rem(22);
-    right: rem(180);
+    right: rem(25);
   }
 }
 
@@ -24,18 +16,24 @@
   @include mq("md") {
     display: block;
     top: rem(22);
-    left: calc(100% - rem(420));
+    left: calc(76% + 8px);
   }
 }
 
 .swiper-button-next, .swiper-rtl .swiper-button-prev {
   background-image: url(../images/common/swiper-button-next.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   width: rem(80);
   height: rem(80);
 }
 
 .swiper-button-prev, .swiper-rtl .swiper-button-nex  {
   background-image: url(../images/common/swiper-button-prev.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   width: rem(80);
   height: rem(80);
 }

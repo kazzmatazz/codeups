@@ -23,13 +23,13 @@
   }
 }
 
-.header__name {
+.header__logo {
   margin-right: auto;
   position: relative;
   z-index: 5001;
 }
 
-.header__logo {
+.header__logo img {
   width: rem(102);
   @include mq("md") {
     width: rem(133);

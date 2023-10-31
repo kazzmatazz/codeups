@@ -33,20 +33,21 @@
 }
 
 .top-voice__items {
-  margin-top: rem(40);
+  margin-top: rem(45);
   @include mq("md") {
     display: flex;
     justify-content: space-between;
-    margin-top: rem(30);
+    margin-top: rem(26);
   }
 }
 
 .top-voice__item {
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
-  padding: rem(15) rem(16) rem(24);
+  padding: rem(13) rem(16) rem(24);
   color: $black;
   @include mq("md") {
     width: 48%;
+    padding: rem(20) rem(20) rem(24) rem(26);
   }
 }
 
@@ -66,7 +67,8 @@
 .top-voice__content {
   width: 47.6%;
   @include mq("md") {
-    width: 58.5%;
+    width: 57.8%;
+    padding-top: rem(35);
   }
 }
 
@@ -83,11 +85,18 @@
   font-weight: $normal;
 }
 
+.top-voice__category {
+  margin-top: rem(-3);
+}
+
+.top-voice__category.category {
+  padding-bottom: rem(2);
+}
+
 .top-voice__title {
   font-weight: $medium;
   font-size: rem(16);
-  margin-top: rem(4);
-  padding-bottom: rem(4);
+  margin-top: 4px;
   border-bottom: 1px solid $green;
   @include mq("md") {
     margin-top: rem(8);
@@ -114,7 +123,7 @@
   margin-top: rem(15);
   font-weight: $normal;
   @include mq("md") {
-    margin-top: rem(40);
+    margin-top: rem(42);
   }
 }
 

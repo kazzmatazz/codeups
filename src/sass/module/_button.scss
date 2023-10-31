@@ -6,7 +6,7 @@
   color: $white;
   font-weight: $normal;
   line-height: 1.571;
-  padding: rem(16) rem(40);
+  padding: rem(16) rem(68) rem(16) rem(16);
   width: rem(202);
   font-size: rem(14);
   position: relative;
@@ -20,8 +20,8 @@
       transform: scaleX(1);
     }
     &::after {
-      border-bottom: 1px solid $green;
-      border-right: 1px solid $green;
+      border-bottom: rem(1) solid $green;
+      border-right: rem(1) solid $green;
       transition: all 0.4s;
     }
   }
@@ -36,7 +36,7 @@
   border-bottom: 1px solid $white;
   border-right: 1px solid $white;
   margin-left: rem(8);
-  top: calc(50% - 1px);
+  top: calc(50% - rem(3));
   transform: skew(45deg) translateY(-50%);
 }
 

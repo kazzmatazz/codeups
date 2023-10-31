@@ -4,7 +4,7 @@
   padding-bottom: rem(70);
   position: relative;
   @include mq("md") {
-    padding-bottom: rem(164);
+    padding-bottom: rem(140);
   }
 }
 
@@ -12,7 +12,7 @@
   @include mq("md") {
     content: "";
     position: absolute;
-    bottom: rem(74);
+    bottom: rem(54);
     right: rem(83);
     background-image: url(../images/common/sango.svg);
     width: rem(194);
@@ -21,7 +21,7 @@
 }
 
 .top-about__img {
-  margin-top: rem(50);
+  margin-top: rem(54);
   position: relative;
   @include mq("md") {
     margin-top: rem(120);
@@ -37,9 +37,8 @@
   height: rem(194);
   @include mq("md") {
     top: rem(-80);
-    width: rem(606);
-    height: rem(194);
-    height: rem(400)
+    width: rem(400);
+    height: rem(605);
   }
 }
 
@@ -59,7 +58,7 @@
     top: 0;
     right: 0;
     display: flex;
-    margin-top: rem(120);
+    margin-top: rem(108);
   }
 }
 
@@ -69,17 +68,19 @@
   font-weight: $normal;
   line-height: 1;
   @include mq("md") {
-    width: rem(400);
+    width: 37%;
     color: $white;
     font-size: rem(80);
     line-height: 1.25;
+    padding-top: rem(12);
+    margin: 0 rem(45) 0 rem(196);
   }
 }
 
 .top-about__body {
   margin-top: rem(16);
   @include mq("md") {
-    width: rem(400);
+    width: 37%;
   }
 }
 
@@ -93,5 +94,9 @@
 
 .top-about__button {
   margin-top: rem(50);
-  text-align: center;
+  padding-left: rem(64);
+  @include mq("md") {
+    margin-top: rem(36);
+    padding-left: rem(94);
+  }
 }

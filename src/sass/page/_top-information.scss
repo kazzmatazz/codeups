@@ -4,16 +4,15 @@
   background-color: $blue;
   padding: rem(80) 0;
   @include mq("md") {
-    padding: rem(100) 0 rem(76);
+    padding: rem(100) 0;
   }
 }
 
 .top-information__contents {
-  margin-top: rem(24);
+  margin-top: rem(30);
   @include mq("md") {
     margin-top: rem(40);
     display: flex;
-    justify-content: space-between;
   }
 }
 
@@ -24,11 +23,12 @@
 }
 
 .top-information__body {
-  margin-top: rem(24);
+  margin-top: rem(27);
   color: $black;
   @include mq("md") {
     margin-top: 0;
     width: 45%;
+    margin-left: rem(50);
   }
 }
 
@@ -36,7 +36,7 @@
   font-size: rem(20);
   font-weight: $bold;
   line-height: 1.2;
-  padding-bottom: rem(4);
+  padding-bottom: rem(2);
   border-bottom: 1px solid $green;
   @include mq("md") {
     margin-top: rem(60);
@@ -49,6 +49,7 @@
 .top-information__text {
   margin-top: rem(8);
   font-weight: $normal;
+  font-family: $noto;
 }
 
 .top-information__button {

@@ -22,7 +22,7 @@
 }
 
 .top-price__contents {
-  margin-top: rem(24);
+  margin-top: rem(28);
   @include mq("md") {
     display: flex;
     flex-direction: row-reverse;
@@ -33,7 +33,7 @@
 
 .top-price__img {
   @include mq("md") {
-    width: 56%;
+    width: 46%;
   }
 }
 
@@ -49,7 +49,7 @@
 .top-price__items {
   margin-top: rem(40);
   @include mq("md") {
-    width: 37%;
+    width: 45.5%;
     margin-top: 0;
     padding-bottom: rem(98);
   }
@@ -67,6 +67,7 @@
   font-weight: $bold;
   padding-bottom: rem(4);
   border-bottom: 1px solid $green;
+  font-size: rem(16);
 }
 
 .top-price__info {

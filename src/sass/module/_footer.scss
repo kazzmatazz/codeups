@@ -63,19 +63,20 @@
   }
 }
 
-.footer-menu__items {
+.footer-menu__item .menu__link {
+  margin-top: rem(22);
+}
+
+.footer-menu__left {
   @include mq("md") {
     display: flex;
   }
 }
 
-.footer-menu__item .menu__link {
-  margin-top: rem(22);
-}
-
 .footer-menu__right {
   @include mq("md") {
     margin-left: rem(120);
+    display: flex;
   }
 }
 

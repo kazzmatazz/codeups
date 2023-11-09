@@ -40,7 +40,7 @@
 }
 
 .top-mv__title-main {
-  font-family: $lato;
+  font-family: $lato-font;
   font-size: rem(40);
   letter-spacing: 0.54em;
   margin-left: rem(20);
@@ -53,4 +53,5 @@
 
 .top-mv__title-sub {
   font-size: rem(20);
+  font-family: $gotu-font;
 }

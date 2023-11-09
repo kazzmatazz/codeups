@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.swiper-slide {
+  height: auto;
+}
+
 .swiper-button-next {
   display: none;
 

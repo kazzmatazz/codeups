@@ -62,8 +62,8 @@
   height: inherit;
   color: $white;
   font-size: rem(18);
-  font-style: normal;
   font-weight: $normal;
+  font-family: $gotu-font;
   line-height: 1;
   position: relative;
   &:hover::after {
@@ -88,4 +88,5 @@
   font-size: rem(10);
   line-height: 1.5;
   margin-top: rem(4);
+  font-family: $base-font;
 }

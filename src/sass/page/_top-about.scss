@@ -21,33 +21,46 @@
 }
 
 .top-about__img {
-  margin-top: rem(54);
+  margin: rem(54) auto 0;
   position: relative;
+  max-width: 600px;
   @include mq("md") {
+    max-width: 100%;
     margin-top: rem(120);
     padding-left: rem(200);
   }
 }
 
-.top-about__img img:nth-of-type(1) {
-  position: absolute;
-  top: rem(-26);
-  left: 0;
-  width: rem(128);
-  height: rem(194);
+.top-about__img picture {
+  margin: 0 auto;
+  width: rem(280);
+  max-width: 100%;
+  display: block;
+  position: relative;
+  left: rem(30);
   @include mq("md") {
-    top: rem(-80);
-    width: rem(400);
-    height: rem(605);
+    width: rem(880);
+    left: 0;
   }
 }
 
-.top-about__img img:nth-of-type(2) {
-  margin-left: rem(65);
-  width: rem(280);
+.top-about__img picture::before {
+  content: "";
+  position: absolute;
+  top: rem(-26);
+  left: rem(-64);
+  width: rem(128);
+  height: rem(194);
+  background-image: url(../images/common/about-ocean-sp-img1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   @include mq("md") {
-    width: rem(880);
-    margin-left: rem(0);
+    background-image: url(../images/common/about-ocean-img1.jpg);
+    top: rem(-80);
+    left: rem(-200);
+    width: rem(400);
+    height: rem(606);
   }
 }
 
@@ -65,10 +78,12 @@
 .top-about__title {
   color: $green;
   font-size: rem(40);
+  font-family: $gotu-font;
   font-weight: $normal;
   line-height: 1;
   @include mq("md") {
-    width: 37%;
+    width: 400px;
+    max-width: 100%;
     color: $white;
     font-size: rem(80);
     line-height: 1.25;
@@ -94,9 +109,10 @@
 
 .top-about__button {
   margin-top: rem(50);
-  padding-left: rem(64);
+  text-align: center;
   @include mq("md") {
     margin-top: rem(36);
+    text-align: left;
     padding-left: rem(94);
   }
 }

@@ -10,6 +10,7 @@
   cursor: pointer;
   border: 1px solid $green;
   border-radius: 50%;
+  background-color: $white;
   @include mq("md") {
     right: 20px;
     bottom: 20px;

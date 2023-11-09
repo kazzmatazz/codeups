@@ -110,6 +110,7 @@
   color: $white;
   font-size: rem(12);
   font-weight: $normal;
+  font-family: $gotu-font;
   line-height: 1.5;
   @include mq("md") {
     margin-top: rem(80);

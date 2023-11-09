@@ -35,9 +35,16 @@
 .top-voice__items {
   margin-top: rem(45);
   @include mq("md") {
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, rem(333));
+    // justify-content: center;
+    // row-gap: rem(38);
+    // column-gap: rem(40);
+
     display: flex;
     justify-content: space-between;
-    margin-top: rem(26);
+    flex-wrap: wrap;
+    margin-top: rem(30);
   }
 }
 
@@ -57,6 +64,13 @@
     margin-top: 0;
   }
 }
+
+.top-voice__item:nth-child(n + 3) {
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
 
 .top-voice__contents {
   display: flex;

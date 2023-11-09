@@ -37,6 +37,10 @@
 .top-blog__inner.inner {
   padding-left: rem(20);
   padding-right: rem(20);
+  @include mq("md") {
+    padding-left: rem(25);
+    padding-right: rem(25);
+  }
 }
 
 .top-blog__heading .section-heading__main,
@@ -50,7 +54,8 @@
 .top-blog__items {
   margin-top: rem(30);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(rem(334), 1fr));
+  grid-template-columns: repeat(auto-fit, rem(333));
+  justify-content: center;
   row-gap: rem(38);
   column-gap: rem(40);
   @include mq("md") {
@@ -58,10 +63,15 @@
   }
 }
 
-.top-blog__item {
+.top-blog__link {
+  display: block;
   padding: rem(16) rem(16) rem(24);
   box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
   background-color: $white;
+  transition: all 0.3s;
+	&:hover {
+	  opacity: 0.7;
+	}
 }
 
 .top-blog__img img {
@@ -77,6 +87,7 @@
 .top-blog__date {
   font-size: rem(12);
   font-weight: $normal;
+  font-family: $gotu-font;
 }
 
 .top-blog__title {

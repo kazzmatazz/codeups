@@ -7,7 +7,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   // スワイパー1
-  const swiper1 = new Swiper(".swiper1", {
+  const swiper1 = new Swiper(".js-swiper1", {
     effect: "fade",
     speed: 3000,
     allowTouchMove: false,
@@ -17,7 +17,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   // スワイパー2
-  const swiper2 = new Swiper(".swiper2", {
+  const swiper2 = new Swiper(".js-swiper2", {
     slidesPerView: 'auto',
     spaceBetween: 24,
     grabCursor: true,
@@ -54,25 +54,41 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
   });
 
-  // トップへ戻るボタン
-  $(function () {
-    const pageTop = $(".js-page-top");
-    pageTop.hide();
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 20) {
-        pageTop.fadeIn();
-      } else {
-        pageTop.fadeOut();
-      }
-    });
-    pageTop.click(function () {
-      $("body, html").animate(
-        {
-          scrollTop: 0,
-        },
-        300
-      );
-      return false;
-    });
+  // ページトップボタン
+  const pageTop = $(".page-top");
+  pageTop.hide();
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      pageTop.fadeIn();
+    } else {
+      pageTop.fadeOut();
+    }
+  });
+  pageTop.click(function () {
+    $("body,html").animate(
+      {
+        scrollTop: 0,
+      },
+      500
+    );
+    return false;
+  });
+  // フッター手前でストップ
+  $(".page-top").hide();
+  $(window).on("scroll", function () {
+    let scrollHeight = $(document).height();
+    let scrollPosition = $(window).height() + $(window).scrollTop();
+    let footHeight = $("footer").innerHeight();
+    if (scrollHeight - scrollPosition <= footHeight) {
+      $(".page-top").css({
+        position: "absolute",
+        bottom: footHeight,
+      });
+    } else {
+      $(".page-top").css({
+        position: "fixed",
+        bottom: "0",
+      });
+    }
   });
 });

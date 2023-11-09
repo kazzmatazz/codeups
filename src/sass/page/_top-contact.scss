@@ -80,7 +80,6 @@
   text-align: center;
   color: $black;
   font-weight: $normal;
-  font-family: $noto;
   @include mq("md") {
     text-align: left;
   }

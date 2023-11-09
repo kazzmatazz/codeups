@@ -11,7 +11,6 @@
 .top-campaign__inner {
   padding-left: rem(15);
   position: relative;
-  
   @include mq("md") {
     padding-left: rem(180);
   }
@@ -20,7 +19,6 @@
 .top-campaign__slider {
   margin-top: rem(24);
   overflow: visible;
-  
   @include mq("md") {
     margin-top: rem(40);
   }
@@ -28,7 +26,6 @@
 
 .top-campaign .swiper-slide {
   width: rem(280);
-  
   @include mq("md") {
     width: rem(333);
   }
@@ -36,12 +33,12 @@
 
 .top-campaign__content {
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+  height: 100%;
 }
 
 .top-campaign__img img {
   aspect-ratio: 70 / 47;
   object-fit: cover;
-  
   @include mq("md") {
     aspect-ratio: 333 / 223;
   }
@@ -81,7 +78,7 @@
 .top-campaign__price {
   margin-top: rem(8);
   display: flex;
-  font-family: $lato;
+  font-family: $lato-font;
   font-weight: $bold;
   line-height: 1;
   padding-left: rem(20);

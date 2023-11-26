@@ -1,19 +1,15 @@
 @use "global" as *;
 
 .top-voice {
-  padding-bottom: rem(80);
   position: relative;
-  @include mq("md") {
-    padding: rem(120) 0 rem(140);
-  }
 }
 
 .top-voice::before {
   @include mq("md") {
     content: "";
     position: absolute;
-    top: 0;
-    left: rem(100);
+    top: rem(-120);
+    left: calc(50% - min(48%, rem(620)));
     background-image: url(../images/common/top-voice-group.svg);
     width: rem(301);
     height: rem(138);
@@ -24,8 +20,8 @@
   @include mq("md") {
     content: "";
     position: absolute;
-    bottom: rem(73);
-    right: rem(180);
+    bottom: rem(-68);
+    right: calc(50% - min(48%, rem(540)));
     background-image: url(../images/common/ibaratatsu.svg);
     width: rem(71);
     height: rem(162);
@@ -35,12 +31,6 @@
 .top-voice__items {
   margin-top: rem(45);
   @include mq("md") {
-    // display: grid;
-    // grid-template-columns: repeat(auto-fit, rem(333));
-    // justify-content: center;
-    // row-gap: rem(38);
-    // column-gap: rem(40);
-
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

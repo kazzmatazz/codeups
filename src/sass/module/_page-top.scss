@@ -2,37 +2,50 @@
 
 .page-top {
   position: fixed;
-  z-index: 9000;
-  right: 15px;
-  bottom: 15px;
-  width: 48px;
-  height: 48px;
+  z-index: 900;
+  right: rem(15);
+  bottom: rem(15);
+  width: rem(48);
+  height: rem(48);
   cursor: pointer;
   border: 1px solid $green;
   border-radius: 50%;
   background-color: $white;
   @include mq("md") {
-    right: 20px;
-    bottom: 20px;
-    width: 80px;
-    height: 80px;
+    right: rem(20);
+    bottom: rem(20);
+    width: rem(80);
+    height: rem(80);
+  }
+}
+
+.page-top::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  width: rem(22);
+  height: rem(1);
+  background: $green;
+  @include mq("md") {
+    width: rem(40);
   }
 }
 
 .page-top::after {
   content: "";
-  display: inline-block;
+  display: block;
   position: absolute;
-  width: rem(6);
-  height: rem(28);
+  top: rem(12);
+  left: rem(21);
+  width: rem(10);
+  height: rem(20);
   border-top: 1px solid $green;
-  border-right: 1px solid $green;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: rotate(-45deg);
   @include mq("md") {
-    width: rem(6);
-    height: rem(40);
+    top: rem(19);
+    left: rem(37);
   }
 }
-

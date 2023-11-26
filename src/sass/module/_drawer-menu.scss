@@ -1,5 +1,10 @@
 @use "global" as *;
 
+body.active {
+  height: 100%;
+  overflow: hidden;
+}
+
 .drawer-menu {
   position: absolute;
   z-index: 5000;
@@ -17,6 +22,7 @@
   width: 100%;
   height: inherit;
   padding: 0 rem(15);
+  overflow: scroll;
 }
 
 .drawer-menu__right {

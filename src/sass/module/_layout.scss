@@ -1,0 +1,64 @@
+@use "global" as *;
+
+.top-campaign-layout {
+  margin-top: rem(40);
+  overflow: hidden;
+  @include mq("md") {
+    margin-top: rem(120);
+  }
+}
+
+.top-about-layout {
+  margin-top: rem(80);
+  @include mq("md") {
+    margin-top: rem(140);
+  }
+}
+
+.top-information-layout {
+  margin-top: rem(70);
+  padding: rem(80) 0;
+  @include mq("md") {
+    padding: rem(100) 0;
+    margin-top: rem(140);
+  }
+}
+
+.top-blog-layout {
+  padding-top: rem(80);
+  @include mq("md") {
+    padding-top: rem(100);
+  }
+}
+
+.top-voice-layout {
+  margin-top: rem(80);
+  @include mq("md") {
+    margin-top: rem(140);
+  }
+}
+
+.top-price-layout {
+  padding: rem(80) 0;
+  margin-top: rem(80);
+  @include mq("md") {
+    margin-top: rem(140);
+    padding: rem(100) 0;
+  }
+}
+
+.top-contact-layout {
+  margin-top: rem(80);
+  @include mq("md") {
+    margin-top: rem(140);
+  }
+}
+
+.footer-layout {
+  margin-top: rem(100);
+  padding: rem(48) 0 rem(56);
+  @include mq("md") {
+    margin-top: rem(160);
+    padding: rem(80) 0 rem(80);
+  }
+}

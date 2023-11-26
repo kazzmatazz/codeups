@@ -1,9 +1,11 @@
 
-jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
+jQuery(function ($) {
   // ハンバーガーメニュー
+  // 背景がスクロールされないように
   $(".js-hamburger,.js-drawer,.js-drawer a").click(function () {
     $(".js-hamburger").toggleClass("is-active");
     $(".js-drawer").fadeToggle();
+    $("body").toggleClass("active");
   });
 
   // スワイパー1

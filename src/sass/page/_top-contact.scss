@@ -1,25 +1,20 @@
 @use "global" as *;
 
 .top-contact {
-  padding: rem(80) 0 rem(100);
   position: relative;
-  @include mq("md") {
-    padding: rem(140) 0 rem(160);
-  }
 }
 
 .top-contact::after {
   content: "";
   position: absolute;
-  top: rem(54);
-  right: rem(15);
+  top: rem(-24);
+  right: calc(50% - min(48%, rem(670)));
   background-image: url(../images/common/top-price-group.svg);
   background-size: cover;
   width: rem(109);
   height: rem(50);
   @include mq("md") {
-    top: rem(100);
-    right: rem(50);
+    top: rem(-40);
     width: rem(301);
     height: rem(138);
   }
@@ -28,7 +23,7 @@
 .top-contact__container {
   @include mq("md") {
     box-shadow: rem(4) rem(4) rem(10) 0 rgba(0, 0, 0, 0.25);
-    padding: rem(80) 112px rem(80) rem(50);
+    padding: rem(80) rem(112) rem(80) rem(50);
   }
 }
 
@@ -43,8 +38,7 @@
   @include mq("md") {
     width: 56.9%;
     padding: 0;
-    padding-right: rem(84);
-    border-right: 1px solid $green;
+    padding-right: rem(45);
   }
 }
 
@@ -110,11 +104,12 @@
   padding: 0 rem(15);
   margin-top: rem(40);
   @include mq("md") {
-    width: 29.2%;
+    width: 43.1%;
     padding: 0;
     margin-top: 0;
-    margin-left: rem(81);
+    padding-left: rem(81);
     padding-top: rem(20);
+    border-left: 1px solid $green;
   }
 }
 
@@ -133,15 +128,9 @@
   font-size: rem(14);
   font-weight: $normal;
   line-height: 1.286;
-  @include mq("md") {
-    padding-left: rem(50);
-  }
 }
 
 .top-contact__button {
   text-align: center;
   margin-top: rem(38);
-  @include mq("md") {
-    padding-left: rem(40);
-  }
 }

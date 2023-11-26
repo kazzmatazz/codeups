@@ -1,12 +1,8 @@
 @use "global" as *;
 
 .top-price {
-  padding: rem(80) 0;
   background-color: $blue;
   position: relative;
-  @include mq("md") {
-    padding: rem(100) 0;
-  }
 }
 
 .top-price::after {
@@ -14,7 +10,7 @@
     content: "";
     position: absolute;
     bottom: rem(60);
-    left: rem(100);
+    left: calc(50% - min(48%, rem(620)));
     background-image: url(../images/common/top-price-group.svg);
     width: rem(437);
     height: rem(201);

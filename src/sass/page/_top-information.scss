@@ -2,10 +2,6 @@
 
 .top-information {
   background-color: $blue;
-  padding: rem(80) 0;
-  @include mq("md") {
-    padding: rem(100) 0;
-  }
 }
 
 .top-information__contents {
@@ -26,9 +22,10 @@
   margin-top: rem(27);
   color: $black;
   @include mq("md") {
-    margin-top: 0;
+    padding-top: rem(60);
     width: 45%;
     margin-left: rem(50);
+    margin-top: 0;
   }
 }
 
@@ -39,7 +36,6 @@
   padding-bottom: rem(2);
   border-bottom: 1px solid $green;
   @include mq("md") {
-    margin-top: rem(60);
     font-size: rem(24);
     line-height: 1;
     padding-bottom: rem(8);

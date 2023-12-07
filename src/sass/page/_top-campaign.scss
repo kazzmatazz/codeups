@@ -111,6 +111,7 @@
 .top-campaign__button {
   margin-top: rem(40);
   text-align: center;
+  padding-bottom: rem(5);
   @include mq("md") {
     margin-top: rem(80);
   }

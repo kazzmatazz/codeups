@@ -40,7 +40,7 @@
 }
 
 .top-blog__heading .section-heading__main,
-.top-blog__heading .section-heading__main span,
+.top-blog__heading .section-heading__main::first-letter,
 .top-blog__heading .section-heading__sub {
   @include mq("md") {
     color: $white;
@@ -50,12 +50,12 @@
 .top-blog__items {
   margin-top: rem(30);
   display: grid;
-  grid-template-columns: repeat(1, rem(333));
+  grid-template-columns: repeat(1, 1fr);
   justify-content: center;
   row-gap: rem(38);
   column-gap: rem(40);
   @include mq("md") {
-    grid-template-columns: repeat(3, rem(333));
+    grid-template-columns: repeat(3, 1fr);
     margin-top: rem(80);
   }
 }
@@ -97,7 +97,6 @@
 .top-blog__text {
   font-weight: $normal;
   margin-top: rem(16);
-  padding-right: rem(6);
 }
 
 .top-blog__button {

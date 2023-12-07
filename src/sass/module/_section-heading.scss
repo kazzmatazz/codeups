@@ -16,7 +16,7 @@
   }
 }
 
-.section-heading__main span {
+.section-heading__main::first-letter {
   color: $green;
 }
 

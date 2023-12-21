@@ -20,6 +20,7 @@ jQuery(function ($) {
 
   // スワイパー2
   const swiper2 = new Swiper(".js-swiper2", {
+    loop: true,
     slidesPerView: 'auto',
     spaceBetween: 24,
     grabCursor: true,

@@ -89,12 +89,11 @@
   font-weight: $normal;
 }
 
-.top-voice__category {
-  margin-top: rem(-3);
-}
-
 .top-voice__category.category {
   padding-bottom: rem(2);
+  @include mq("md") {
+    margin-left: auto;
+  }
 }
 
 .top-voice__title {

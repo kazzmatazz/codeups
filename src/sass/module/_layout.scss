@@ -2,7 +2,6 @@
 
 .top-campaign-layout {
   margin-top: rem(40);
-  overflow: hidden;
   @include mq("md") {
     margin-top: rem(120);
   }
@@ -16,11 +15,11 @@
 }
 
 .top-information-layout {
-  margin-top: rem(70);
-  padding: rem(80) 0;
+  margin-top: rem(64);
+  padding: rem(80) 0 rem(72);
   @include mq("md") {
     padding: rem(100) 0;
-    margin-top: rem(140);
+    margin-top: rem(136);
   }
 }
 
@@ -32,18 +31,18 @@
 }
 
 .top-voice-layout {
-  margin-top: rem(80);
+  margin-top: rem(72);
   @include mq("md") {
-    margin-top: rem(140);
+    margin-top: rem(132);
   }
 }
 
 .top-price-layout {
-  padding: rem(80) 0;
-  margin-top: rem(80);
+  padding: rem(80) 0 rem(74);
+  margin-top: rem(72);
   @include mq("md") {
-    margin-top: rem(140);
-    padding: rem(100) 0;
+    margin-top: rem(134);
+    padding: rem(100) 0 rem(94);
   }
 }
 
@@ -55,7 +54,7 @@
 }
 
 .footer-layout {
-  margin-top: rem(100);
+  margin-top: rem(96);
   padding: rem(48) 0 rem(56);
   @include mq("md") {
     margin-top: rem(160);

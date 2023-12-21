@@ -14,7 +14,6 @@
     height: rem(500);
     background: url(../images/common/top-blog-background.jpg) no-repeat;
     background-size: cover;
-    z-index: -1;
   }
 }
 
@@ -33,6 +32,7 @@
 .top-blog__inner.inner {
   padding-left: rem(20);
   padding-right: rem(20);
+  position: relative;
   @include mq("md") {
     padding-left: rem(25);
     padding-right: rem(25);

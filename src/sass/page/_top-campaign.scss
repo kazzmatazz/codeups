@@ -10,7 +10,9 @@
 
 .top-campaign__slider {
   margin-top: rem(24);
-  overflow: visible;
+  margin-right: calc(50% - 50vw);
+  padding-right: calc((100vw - 100%) / 2);
+  padding-bottom: rem(10);
   @include mq("md") {
     margin-top: rem(40);
   }
@@ -18,7 +20,6 @@
 
 .top-campaign .swiper-slide {
   width: rem(280);
-  height: initial;
   @include mq("md") {
     width: rem(333);
   }
@@ -109,10 +110,10 @@
 }
 
 .top-campaign__button {
-  margin-top: rem(40);
+  margin-top: rem(30);
   text-align: center;
   padding-bottom: rem(5);
   @include mq("md") {
-    margin-top: rem(80);
+    margin-top: rem(70);
   }
 }

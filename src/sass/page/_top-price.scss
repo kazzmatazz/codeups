@@ -28,18 +28,16 @@
 }
 
 .top-price__img {
+  aspect-ratio: 345 / 227;
   @include mq("md") {
+    aspect-ratio: 373 / 246;
     width: 46%;
   }
 }
 
 .top-price__img img {
-  aspect-ratio: 345 / 227;
   object-fit: cover;
-  @include mq("md") {
-    aspect-ratio: 373 / 246;
-    height: 100%;
-  }
+  height: 100%;
 }
 
 .top-price__items {

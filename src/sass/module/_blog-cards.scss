@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: rem(38);
+  column-gap: rem(40);
+}

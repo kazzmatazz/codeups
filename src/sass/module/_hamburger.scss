@@ -1,15 +1,5 @@
 @use "global" as *;
 
-.hamburger {
-  position: fixed;
-  z-index: 9999;
-  top: rem(28);
-  right: rem(15);
-  width: rem(32);
-  height: rem(24);
-  cursor: pointer;
-}
-
 .hamburger span {
   position: absolute;
   left: 0;

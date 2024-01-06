@@ -52,10 +52,15 @@
   text-align: center;
 }
 
-.top-information__img img {
+.top-information__img {
   aspect-ratio: 345 / 227;
-  object-fit: cover;
   @include mq("md") {
     aspect-ratio: 540 / 356;
   }
+}
+
+.top-information__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

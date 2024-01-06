@@ -9,7 +9,7 @@ jQuery(function ($) {
   });
 
   // スワイパー1
-  const swiper1 = new Swiper(".js-swiper1", {
+  const swiper1 = new Swiper(".js-mv-swiper", {
     effect: "fade",
     speed: 3000,
     allowTouchMove: false,
@@ -19,7 +19,7 @@ jQuery(function ($) {
   });
 
   // スワイパー2
-  const swiper2 = new Swiper(".js-swiper2", {
+  const swiper2 = new Swiper(".js-campaign-swiper", {
     loop: true,
     slidesPerView: 'auto',
     spaceBetween: 24,

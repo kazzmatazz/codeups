@@ -4,6 +4,23 @@
   text-align: center;
 }
 
+.section-heading--white .section-heading__main,
+.section-heading--white .section-heading__main::first-letter,
+.section-heading--white .section-heading__sub {
+  @include mq("md") {
+    color: $white;
+  }
+}
+
+.section-heading--wide .section-heading__main {
+  font-size: rem(80);
+  line-height: 1;
+}
+
+.section-heading--wide .section-heading__sub {
+  margin-top: rem(-4);
+}
+
 .section-heading__main {
   color: $black;
   font-size: rem(32);

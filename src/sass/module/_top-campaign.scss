@@ -3,9 +3,6 @@
 .top-campaign__inner {
   padding-left: rem(15);
   position: relative;
-  @include mq("md") {
-    padding-left: rem(180);
-  }
 }
 
 .top-campaign__slider {

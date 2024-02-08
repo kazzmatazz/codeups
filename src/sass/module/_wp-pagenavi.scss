@@ -1,0 +1,61 @@
+@use "global" as *;
+
+.wp-pagenavi {
+  display: flex;
+  justify-content: center;
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+  border: 1px solid $green;
+  font-family: $lato-font;
+  font-weight: $bold;
+  padding: rem(7) rem(14);
+}
+
+.wp-pagenavi a {
+  color: $green;
+  margin-left: rem(10);
+}
+
+.wp-pagenavi span {
+  margin-left: rem(40);
+  color: $white;
+  background-color: $green;
+}
+
+.wp-pagenavi a:first-child,
+.wp-pagenavi a:last-child {
+  padding-right: rem(19);
+  padding-left: rem(19);
+  position: relative;
+}
+
+.wp-pagenavi a:first-child::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-top: solid 1px $green;
+  border-left: solid 1px $green;
+  top: rem(20);
+  left: 50%;
+  transform: rotate(-45deg) translateY(-50%);
+}
+
+.wp-pagenavi a:last-child {
+  margin-left: rem(40);
+}
+
+.wp-pagenavi a:last-child::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-top: solid 1px $green;
+  border-right: solid 1px $green;
+  top: 50%;
+  left: rem(15);
+  transform: rotate(45deg) translateX(-50%);
+}
+

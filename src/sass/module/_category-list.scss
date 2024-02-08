@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(16) rem(21);
+  @include mq("md") {
+    column-gap: rem(32);
+  }
+}
+
+.category-list__item {
+  width: rem(162);
+  max-width: 100%;
+}
+
+.category-list__item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: rem(14);
+  line-height: calc(22 / 14);
+  padding: rem(6) 0;
+  color: $green;
+  border: 1px solid $green;
+  transition: color 0.3s, background-color 0.3s;
+	&:hover {
+	  color: $white;
+    background-color: $green;
+	}
+}
+
+.category-list__item.is-active a{
+  color: $white;
+  background-color: $green;
+}

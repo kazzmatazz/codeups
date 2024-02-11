@@ -94,4 +94,22 @@ jQuery(function ($) {
       });
     }
   });
+
+  // モーダル表示イベント
+  let scrollPos;
+  $(".js-modal").click(function () {
+    scrollPos = $(window).scrollTop();
+    $(".js-overlay").html($(this).prop("outerHTML"));
+    $(".js-overlay").fadeIn(200);
+    $('body').addClass('is-fixed');
+    return false;
+  });
+
+  $(".js-overlay").click(function () {
+    $(".js-overlay").fadeOut(200, function () {
+      $('body').removeClass('is-fixed');
+      $(window).scrollTop(scrollPos);
+    });
+    return false;
+  });
 });

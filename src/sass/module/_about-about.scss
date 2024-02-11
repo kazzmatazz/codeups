@@ -1,0 +1,118 @@
+@use "global" as *;
+
+.about-about {
+  position: relative;
+}
+
+.about-about::before {
+  content: "";
+  position: absolute;
+  top: rem(-28);
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  z-index: 1;
+  background-image: url(../images/common/sub-fish-group.svg);
+  @include mq("md") {
+    top: rem(-140);
+    left: calc(50% - min(48%, rem(620)));
+    background-image: url(../images/common/top-voice-group.svg);
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.about-about__container {
+  margin: rem(54) auto 0;
+  margin-top: rem(54);
+  position: relative;
+  max-width: rem(600);
+  @include mq("md") {
+    max-width: 100%;
+    margin-top: rem(120);
+    padding-left: rem(200);
+  }
+}
+
+.about-about__images {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.about-about__img1 {
+  position: absolute;
+  top: rem(-25);
+  left: calc(50% - rem(173));
+  width: rem(128);
+  max-width: 100%;
+  z-index: 1;
+  @include mq("md") {
+    top: rem(-80);
+    left: rem(-200);
+    width: rem(400);
+  }
+}
+
+.about-about__img2 {
+  aspect-ratio: 345 / 228;
+  @include mq("md") {
+    width: rem(880);
+    max-width: 100%;
+    aspect-ratio: 880 / 581;
+  }
+}
+
+.about-about__img2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-about__content {
+  margin-top: rem(40);
+  @include mq("md") {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: rem(116);
+    padding-right: rem(60);
+    z-index: 2;
+  }
+}
+
+.about-about__title {
+  position: absolute;
+  top: rem(24);
+  left: rem(24);
+  color: $white;
+  font-size: rem(40);
+  font-family: $gotu-font;
+  font-weight: $normal;
+  line-height: 1;
+  @include mq("md") {
+    position: static;
+    width: rem(405);
+    max-width: 100%;
+    font-size: rem(80);
+    line-height: 1.25;
+  }
+}
+
+.about-about__body {
+  @include mq("md") {
+    width: 37%;
+    margin-left: rem(36);
+  }
+}
+
+.about-about__text {
+  color: $black;
+  font-weight: $normal;
+  @include mq("md") {
+    color: $white;
+  }
+}

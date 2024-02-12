@@ -95,7 +95,7 @@ jQuery(function ($) {
     }
   });
 
-  // モーダル表示イベント
+  // モーダルの表示
   let scrollPos;
   $(".js-modal").click(function () {
     scrollPos = $(window).scrollTop();
@@ -111,5 +111,19 @@ jQuery(function ($) {
       $(window).scrollTop(scrollPos);
     });
     return false;
+  });
+
+  // タブの切り替え
+  $(function () {
+    const tabButton = $(".js-tab-menu"),
+      tabContent = $(".js-tab-content");
+    tabButton.on("click", function () {
+      let index = tabButton.index(this);
+  
+      tabButton.removeClass("is-active");
+      $(this).addClass("is-active");
+      tabContent.removeClass("is-active");
+      tabContent.eq(index).addClass("is-active");
+    });
   });
 });

@@ -1,0 +1,72 @@
+@use "global" as *;
+
+.tab-menu {
+  display: grid;
+  gap: rem(20);
+  grid-template-columns: repeat(3, 1fr);
+  @include mq("md") {
+    gap: rem(90);
+  }
+}
+
+.tab-menu__item {
+  width: rem(102);
+  max-width: 100%;
+  padding: rem(10);
+  background-color: $blue;
+  color: $green;
+  box-shadow: 0 rem(4) rem(4) 0 rgba(0, 0, 0, 0.25);
+  font-size: rem(14);
+  text-align: center;
+  cursor: pointer;
+  @include mq("md") {
+    width: rem(300);
+    font-size: rem(24);
+    padding: rem(13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.tab-menu__item.is-active {
+  color: $white;
+  background-color: $green;
+}
+
+.tab-menu__item::before {
+  @include mq("md") {
+    content: "";
+    display:  block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: rem(64);
+    height: rem(64);
+    margin-right: rem(8);
+  }
+}
+
+.tab-menu__item:nth-child(1)::before {
+  background-image: url(../images/common/whale-right-green.svg);
+}
+
+.tab-menu__item.is-active:nth-child(1)::before {
+  background-image: url(../images/common/whale-right-white.svg);
+}
+
+.tab-menu__item:nth-child(2)::before {
+  background-image: url(../images/common/whale-left-green.svg);
+}
+
+.tab-menu__item.is-active:nth-child(2)::before {
+  background-image: url(../images/common/whale-left-white.svg);
+}
+
+.tab-menu__item:nth-child(3)::before {
+  background-image: url(../images/common/fish-left-green.svg);
+}
+
+.tab-menu__item.is-active:nth-child(3)::before {
+  background-image: url(../images/common/fish-left-white.svg);
+}

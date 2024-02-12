@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.information-page {
+  position: relative;
+}
+
+.information-page::before {
+  content: "";
+  position: absolute;
+  top: rem(-82);
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  background-image: url(../images/common/sub-fish-group.svg);
+  @include mq("md") {
+    top: rem(-70);
+    left: calc(50% - min(48%, rem(620)));
+    background-image: url(../images/common/top-voice-group.svg);
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.information-page__inner {
+  position: relative;
+}
+

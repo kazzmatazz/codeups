@@ -126,4 +126,10 @@ jQuery(function ($) {
       tabContent.eq(index).addClass("is-active");
     });
   });
+
+  // サイドバーのトグルメニュー
+  $('.js-sidebar-archive').on('click', function () {
+    $(this).next().slideToggle();
+    $(this).toggleClass('is-open');
+});
 });

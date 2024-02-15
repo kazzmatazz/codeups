@@ -1,0 +1,59 @@
+@use "global" as *;
+
+.sidebar-archive {
+  font-size: rem(24);
+  color: $green;
+}
+
+.sidebar-archive__year {
+  padding-left: rem(32);
+  position: relative;
+  font-weight: $regular;
+  cursor: pointer;
+}
+
+.sidebar-archive__year::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top: rem(12) solid transparent;
+  border-bottom: rem(12) solid transparent;
+  border-left: rem(24) solid $green;
+  border-right: 0;
+}
+
+.sidebar-archive__year.is-open::before {
+  border-right: rem(12) solid transparent;
+  border-left: rem(12) solid transparent;
+  border-top: rem(24) solid $green;
+  border-bottom: 0;
+}
+
+.sidebar-archive__months {
+  padding-left: rem(24);
+  display: none;
+}
+
+.sidebar-archive__month {
+  padding-left: rem(32);
+  position: relative;
+}
+
+.sidebar-archive__month::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: rem(12) solid transparent;
+  border-bottom: rem(12) solid transparent;
+  border-left: rem(24) solid $green;
+  border-right: 0;
+}

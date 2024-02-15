@@ -5,4 +5,14 @@
   grid-template-columns: repeat(1, 1fr);
   row-gap: rem(38);
   column-gap: rem(40);
+  @include mq("md") {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.blog-cards.blog-cards--two {
+  @include mq("md") {
+    row-gap: rem(80);
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

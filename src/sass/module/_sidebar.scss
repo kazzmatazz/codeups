@@ -1,0 +1,70 @@
+@use "global" as *;
+
+.sidebar__items {
+  padding: 0 rem(25);
+  @include mq("md") {
+    padding: 0;
+  }
+}
+
+.sidebar__item + .sidebar__item {
+  margin-top: rem(76);
+}
+
+.sidebar__heading {
+  font-size: rem(24);
+  font-weight: $regular;
+  line-height: 1;
+  padding-left: rem(16);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.sidebar__heading::before {
+  content: "";
+  display:  block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: rem(50);
+  height: rem(50);
+  margin-right: rem(8);
+  background-image: url(../images/common/whale-right-black.svg);
+}
+
+.sidebar__heading::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: rem(8);
+  height: rem(50);
+  background-color: $green;
+}
+
+.sidebar__contents {
+  margin-top: rem(24);
+}
+
+.sidebar__button {
+  margin-top: rem(40);
+  text-align: center;
+}
+
+.sidebar__popular-item + .sidebar__popular-item {
+  margin-top: rem(24);
+}
+
+.sidebar__review-item + .sidebar__review-item {
+  margin-top: rem(40);
+}
+
+.sidebar__campaign-item + .sidebar__campaign-item {
+  margin-top: rem(32);
+}
+
+.sidebar__archive-item + .sidebar__archive-item {
+  margin-top: rem(4);
+}

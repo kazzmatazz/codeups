@@ -3,3 +3,10 @@
 .wp-pagenavi-layout {
   margin-top: rem(80);
 }
+
+.wp-pagenavi-layout.wp-pagenavi-layout--short {
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}

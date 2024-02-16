@@ -1,0 +1,113 @@
+@use "global" as *;
+
+.blog-detail {
+  position: relative;
+}
+
+.blog-detail::before {
+  content: "";
+  position: absolute;
+  top: rem(-28);
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  z-index: 1;
+  background-image: url(../images/common/sub-fish-group.svg);
+  @include mq("md") {
+    top: rem(-72);
+    left: calc(50% - min(48%, rem(620)));
+    background-image: url(../images/common/top-voice-group.svg);
+    width: rem(301);
+    height: rem(138);
+    z-index: auto;
+  }
+}
+
+.blog-detail__date {
+  font-size: rem(14);
+  font-family: $gotu-font;
+  line-height: calc(18 / 14);
+}
+
+.blog-detail__main {
+  border-bottom: 1px solid $green;
+  padding-bottom: rem(7);
+  margin-top: rem(8);
+  font-size: rem(24);
+  line-height: 1;
+  @include mq("md") {
+    font-size: rem(32);
+  }
+}
+
+.blog-detail__contents {
+  margin-top: rem(24);
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+.blog-detail__content + .blog-detail__content {
+  margin-top: rem(24);
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+.blog-detail__img {
+  aspect-ratio: 345 / 231;
+  @include mq("md") {
+    aspect-ratio: 700 / 468;
+  }
+}
+
+.blog-detail__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-detail__text {
+  margin-top: rem(24);
+  @include mq("md") {
+    margin-top: rem(36);
+  }
+}
+
+.blog-detail__items {
+  margin-top: rem(24);
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+.blog-detail__item {
+  padding-left: rem(27);
+  position: relative;
+}
+
+.blog-detail__item::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: rem(18);
+  width: rem(18);
+  background-image: url(../images/common/hitode-green.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.blog-detail__item + .blog-detail__item {
+  margin-top: rem(4);
+}
+
+.blog-detail__information {
+  margin-top: rem(32);
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+

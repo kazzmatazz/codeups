@@ -117,7 +117,7 @@ jQuery(function ($) {
   $(function () {
     const tabButton = $(".js-tab-menu"),
       tabContent = $(".js-tab-content");
-    tabButton.on("click", function () {
+      tabButton.on("click", function () {
       let index = tabButton.index(this);
   
       tabButton.removeClass("is-active");
@@ -131,5 +131,5 @@ jQuery(function ($) {
   $('.js-sidebar-archive').on('click', function () {
     $(this).next().slideToggle();
     $(this).toggleClass('is-open');
-});
+  });
 });

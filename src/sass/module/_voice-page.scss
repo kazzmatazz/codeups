@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.voice-page {
+  position: relative;
+}
+
+.voice-page::before {
+  content: "";
+  position: absolute;
+  top: rem(-26);
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  background-image: url(../images/common/sub-fish-group.svg);
+  @include mq("md") {
+    top: rem(-72);
+    left: calc(50% - min(48%, rem(620)));
+    background-image: url(../images/common/top-voice-group.svg);
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.voice-page__inner {
+  position: relative;
+}
+
+.voice-page__items {
+  margin-top: rem(32);
+}
+
+.voice-page__item {
+  display: none;
+}
+
+.voice-page__item.is-active {
+  display: block;
+}

@@ -1,0 +1,70 @@
+@use "global" as *;
+
+.accordion__item + .accordion__item {
+  margin-top: rem(40);
+}
+
+.accordion__title {
+  position: relative;
+  padding: rem(19) rem(35) rem(19) rem(16);
+  cursor: pointer;
+  background-color: $green;
+  @include mq("md") {
+    padding: rem(30) rem(40);
+    font-size: rem(20);
+  }
+}
+
+.accordion__title::before,
+.accordion__title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: rem(16);
+  width: rem(28);
+  height: 1px;
+  background-color: $white;
+  transition: opacity 0.3s, transform 0.3s;
+
+  @include mq("md") {
+    right: rem(40);
+    width: rem(32);
+  }
+}
+
+.accordion__title::before {
+  transform: rotate(90deg);
+}
+
+.accordion__title.is-open::before {
+  transform: rotate(180deg);
+}
+
+.accordion__title.is-open::after {
+  opacity: 0;
+}
+
+.accordion__title-text {
+  color: $white;
+  line-height: 1;
+  font-size: rem(16);
+  font-weight: $regular;
+
+  @include mq("md") {
+    font-size: rem(20);
+  }
+}
+
+.accordion__content {
+  display: none;
+  padding: rem(20) rem(16);
+  border: 1px solid $green;
+  
+  @include mq("md") {
+    padding: rem(37) rem(40);
+    margin-top: rem(16);
+  }
+}
+
+
+

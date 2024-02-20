@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.price-mv {
+  height: rem(460);
+  width: 100%;
+  background-image: url(../images/common/price-mv-sp-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include mq("md") {
+    height: rem(548);
+    background-image: url(../images/common/price-mv-img.jpg);
+  }
+}

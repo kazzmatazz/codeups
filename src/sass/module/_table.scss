@@ -1,0 +1,105 @@
+@use "global" as *;
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  border-right: 1px solid $green;
+  border-bottom: 1px solid $green;
+
+  @include mq('md') {
+    display: flex;
+  }
+}
+
+.table thead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $green;
+  color: $white;
+  @include mq('md') {
+    width: rem(200);
+  }
+}
+
+.table__body{
+  @include mq("md") {
+    width: calc(100% - rem(200));
+  }
+}
+
+.table__head {
+  padding: rem(6) 0;
+}
+
+.table__row {
+  display: flex;
+}
+
+.table__row td {
+  border-top: 1px solid $green;
+  border-left: 1px solid $green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: rem(60);
+  padding: rem(6) 0;
+  @include mq('md') {
+    padding: rem(16);
+  }
+}
+
+.table__row .table__title {
+  @include mq("md") {
+    justify-content: start;
+  }
+}
+
+.table__row .table__price {
+  @include mq("md") {
+    justify-content: right;
+  }
+}
+
+.table__header span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mq("md") {
+    flex-direction: column-reverse;
+  }
+}
+
+.table__header span::before {
+  content: "";
+  display:  block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: rem(24);
+  height: rem(24);
+  margin-right: rem(8);
+  background-image: url(../images/common/whale-right-white.svg);
+  @include mq("md") {
+    width: rem(64);
+    height: rem(64);
+  }
+}
+
+.table__title {
+  width: 69%;
+  text-align: center;
+  @include mq('md') {
+    width: 68%;
+    text-align: left;
+  }
+}
+
+.table__price {
+  width: 31%;
+  text-align: center;
+  @include mq('md') { 
+    width: 32%;
+    text-align: right;
+  }
+}

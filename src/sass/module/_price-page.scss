@@ -1,0 +1,36 @@
+@use "global" as *;
+
+
+.price-page {
+  position: relative;
+}
+
+.price-page::before {
+  content: "";
+  position: absolute;
+  top: rem(-26);
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  background-image: url(../images/common/sub-fish-group.svg);
+  @include mq("md") {
+    top: rem(-72);
+    left: calc(50% - min(48%, rem(620)));
+    background-image: url(../images/common/top-voice-group.svg);
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.price-page__items {
+  width: 700px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.price-page__item + .price-page__item {
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}

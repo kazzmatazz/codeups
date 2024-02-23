@@ -1,0 +1,215 @@
+@use "global" as *;
+
+.form__item {
+  padding-bottom: rem(24);
+  border-bottom: 1px dotted $green;
+  @include mq("md") {
+    padding-bottom: rem(39);
+  }
+}
+
+.form__item + .form__item {
+  margin-top: rem(24);
+  @include mq("md") {
+    margin-top: rem(39);
+  }
+}
+
+.form__item dl {
+  @include mq("md") {
+    display: flex;
+  }
+}
+
+.form__label {
+  @include mq("md") {
+    width: rem(220);
+  }
+}
+
+.form__label-text {
+  font-weight: $bold;
+}
+
+.form__label-text span {
+  margin-left: rem(8);
+  padding: rem(2) 0;
+  width: rem(60);
+  display: inline-block;
+  text-align: center;
+  font-size: rem(12);
+  color: $white;
+  background-color: $red;
+}
+
+.form__input {
+  margin-top: rem(14);
+  @include mq("md") {
+    margin-top: 0;
+    width: calc(100% - rem(220));
+  }
+}
+
+.form__input-text,
+.form__textarea {
+  padding: rem(7) rem(16);
+  background-color: $white;
+  border: 1px solid $green;
+  width: 100%;
+}
+
+.form__input-text::placeholder {
+  color: $blue;
+}
+
+.form__textarea {
+  height: rem(200);
+  resize: none;
+}
+
+.form__button {
+  text-align: center;
+  margin-top: rem(24);
+}
+
+.form__checkbox {
+  margin-top: rem(10);
+  @include mq("md") {
+    margin-top: 0;
+    width: calc(100% - rem(220));
+  }
+}
+
+.form__checkbox label {
+  display: block;
+}
+
+.form__checkbox label:not(:first-of-type) {
+  margin-top: rem(4);
+}
+
+.form__checkbox input,
+.form__privacy input {
+  display: none;
+}
+
+.form__checkbox input + span {
+  cursor: pointer;
+  display: inline-block;
+  padding-left: rem(25);
+  position: relative;
+}
+
+.form__checkbox input + span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid $green;
+  display: block;
+  width: rem(14);
+  height: rem(14);
+}
+
+.form__checkbox input + span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: rem(2);
+  transform: translateY(-50%) rotate(-45deg);
+  display: block;
+  width: rem(9);
+  height: rem(5);
+  border-bottom: rem(3) solid $red;
+  border-left: rem(3) solid $red;
+  transition:  .3s;
+  opacity: 0;
+}
+
+.form__checkbox input:checked + span::after {
+  opacity: 1;
+}
+
+.form__select {
+  margin-top: rem(13);
+  @include mq(md) {
+    margin-top: 0;
+    width: calc(100% - rem(220));
+  }
+}
+
+.form__select select {
+  padding: rem(12) rem(8);
+  width: 100%;
+  font-size: rem(12);
+  line-height: 1;
+  border: 1px solid $green;
+  background-image: url(../images/common/select-icon.svg);
+  background-repeat: no-repeat;
+  background-size: rem(12);
+  background-position: right rem(8) top rem(10);
+  cursor: pointer;
+}
+
+.form__select select::-ms-expand {
+  display: none;
+}
+
+.form__select select:focus {
+  border: 1px solid $green;
+  box-shadow: none;
+  outline: none;
+}
+
+.form__privacy {
+  margin: rem(40) auto 0;
+  width: 100%;
+  max-width: rem(282);
+  @include mq("md") {
+    max-width: rem(373);
+  }
+}
+
+.form__privacy input + span {
+  cursor: pointer;
+  display: inline-block;
+  padding-left: rem(30);
+  position: relative;
+  font-size: rem(14);
+  @include mq("md") {
+    padding-left: rem(38);
+  }
+}
+
+.form__privacy input + span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  border: 1px solid $green;
+  display: block;
+  width: rem(22);
+  height: rem(22);
+}
+
+.form__privacy input + span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: rem(4);
+  transform: translateY(-50%) rotate(-45deg);
+  display: block;
+  width: rem(12);
+  height: rem(8);
+  border-bottom: rem(3) solid $red;
+  border-left: rem(3) solid $red;
+  transition:  .3s;
+  opacity: 0;
+}
+
+.form__privacy input:checked + span::after {
+  opacity: 1;
+}

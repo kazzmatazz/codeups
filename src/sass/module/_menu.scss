@@ -28,3 +28,12 @@
   line-height: 1.125;
   margin-top: rem(24);
 }
+
+.menu__title.menu__title--site,
+.menu__link.menu__link--site {
+  color: $black;
+}
+
+.menu__title.menu__title--site::before {
+  background-image: url(../images/common/hitode-black.svg);
+}

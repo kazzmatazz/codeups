@@ -51,7 +51,7 @@
   margin-left: rem(16);
 }
 
-.footer-menu {
+.footer__menu {
   display: flex;
   margin-top: rem(40);
   @include mq("md") {
@@ -59,24 +59,24 @@
   }
 }
 
-.footer-menu__item .menu__link {
+.footer__menu-item .menu__link {
   margin-top: rem(22);
 }
 
-.footer-menu__left {
+.footer__menu-left {
   @include mq("md") {
     display: flex;
   }
 }
 
-.footer-menu__right {
+.footer__menu-right {
   @include mq("md") {
     margin-left: rem(120);
     display: flex;
   }
 }
 
-.footer-menu__flex:not(:first-child) {
+.footer__menu-flex:not(:first-child) {
   margin-top: rem(40);
   @include mq("md") {
     margin-left: rem(120);
@@ -84,7 +84,7 @@
   }
 }
 
-.footer-menu__item {
+.footer__menu-item {
   padding-left: rem(22);
   @include mq("md") {
     display: flex;
@@ -92,7 +92,7 @@
   }
 }
 
-.footer-menu__item:not(:first-child) {
+.footer__menu-item:not(:first-child) {
   margin-top: rem(30);
   @include mq("md") {
     margin-top: rem(43);

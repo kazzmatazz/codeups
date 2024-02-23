@@ -15,6 +15,15 @@
   }
 }
 
+.form__item--error .form__input-text::placeholder {
+  color: $white;
+}
+
+.form__item--error .form__input-text {
+  background-color: rgba(201, 72, 0, 0.2);
+  border-color: $red;
+}
+
 .form__item dl {
   @include mq("md") {
     display: flex;

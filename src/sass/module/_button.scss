@@ -35,7 +35,7 @@
 }
 
 .button::after {
-  background-color: #fff;
+  background-color: $white;
   position: absolute;
   content: "";
   top: 0;
@@ -73,4 +73,30 @@
   transform: skew(45deg);
   margin-left: rem(6);
   margin-bottom: rem(4);
+}
+
+.button.button--white {
+  background-color: $white;
+  color: $green;
+  border: rem(1) solid $white;
+}
+
+.button.button--white::before {
+  border: 1px solid $white;
+}
+
+.button.button--white::after {
+  background-color: $green;
+}
+
+.button.button--white:hover,
+.button.button--white:hover span::after {
+  color: $white;
+  border-bottom: 1px solid $white;
+  border-right: 1px solid $white;
+}
+
+.button.button--white span::after {
+  border-bottom: 1px solid $green;
+  border-right: 1px solid $green;
 }

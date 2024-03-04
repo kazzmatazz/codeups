@@ -1,24 +1,7 @@
 @use "global" as *;
 
-.campaign-page {
+.campaign-page__inner {
   position: relative;
-}
-
-.campaign-page::before {
-  content: "";
-  position: absolute;
-  top: rem(-28);
-  left: rem(15);
-  width: rem(120);
-  height: rem(55);
-  background-image: url(../images/common/sub-fish-group.svg);
-  @include mq("md") {
-    top: rem(-70);
-    left: calc(50% - min(48%, rem(620)));
-    background-image: url(../images/common/top-voice-group.svg);
-    width: rem(301);
-    height: rem(138);
-  }
 }
 
 .campaign-page__contents {

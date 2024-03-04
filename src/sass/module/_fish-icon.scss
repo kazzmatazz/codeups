@@ -1,10 +1,10 @@
 @use "global" as *;
 
-.terms-of-service {
+.fish-icon {
   position: relative;
 }
 
-.terms-of-service::before {
+.fish-icon::before {
   content: "";
   position: absolute;
   top: rem(-26);

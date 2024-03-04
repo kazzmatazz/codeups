@@ -113,19 +113,31 @@ jQuery(function ($) {
     return false;
   });
 
-  // タブの切り替え
+  // タブの切り替え（information）
   $(function () {
     const tabButton = $(".js-tab-menu"),
-      tabContent = $(".js-tab-content");
-      tabButton.on("click", function () {
-      let index = tabButton.index(this);
-  
-      tabButton.removeClass("is-active");
-      $(this).addClass("is-active");
-      tabContent.removeClass("is-active");
-      tabContent.eq(index).addClass("is-active");
+          tabContent = $(".js-tab-content");
+    tabButton.on("click", function () {
+        let index = tabButton.index(this);
+        activateTab(index);
     });
-  });
+    function activateTabFromHash() {
+        const hash = window.location.hash;
+        if (hash) {
+            const index = tabButton.filter(hash).index();
+            if (index >= 0) {
+                activateTab(index);
+            }
+        }
+    }
+    function activateTab(index) {
+        tabButton.removeClass("is-active").eq(index).addClass("is-active");
+        tabContent.removeClass("is-active").eq(index).addClass("is-active");
+    }
+    $(window).on('load', activateTabFromHash);
+    $(window).on('hashchange', activateTabFromHash);
+});
+
 
   // サイドバーのトグルメニュー
   $('.js-sidebar-archive').on('click', function () {
@@ -134,11 +146,11 @@ jQuery(function ($) {
   });
 
   // アコーディオン
-  $(".js-accordion__item:first-child .js-accordion__content").css(
+  $(".js-accordion__item .js-accordion__content").css(
     "display",
     "block"
   );
-  $(".js-accordion__item:first-child .js-accordion__title").addClass("is-open");
+  $(".js-accordion__item .js-accordion__title").addClass("is-open");
   $(".js-accordion__title").on("click", function () {
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);

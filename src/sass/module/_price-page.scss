@@ -1,9 +1,7 @@
 @use "global" as *;
 
-.price-page__items {
-  width: 700px;
-  max-width: 100%;
-  margin: auto;
+.price-page__inner.inner {
+  max-width: rem(750);
 }
 
 .price-page__item + .price-page__item {

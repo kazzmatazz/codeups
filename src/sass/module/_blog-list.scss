@@ -18,10 +18,6 @@
   }
 }
 
-.blog-list__items {
-  padding: 0 rem(5);
-}
-
 .blog-list__sidebar {
   margin-top: rem(80);
   @include mq("md") {

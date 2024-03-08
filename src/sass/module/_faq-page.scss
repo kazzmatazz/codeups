@@ -1,7 +1,5 @@
 @use "global" as *;
 
-.faq-page__accordion {
-  width: 100%;
-  max-width: rem(700);
-  margin: auto;
+.faq-page__inner.inner {
+  max-width: rem(750);
 }

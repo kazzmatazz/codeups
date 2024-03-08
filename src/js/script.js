@@ -117,25 +117,35 @@ jQuery(function ($) {
   $(function () {
     const tabButton = $(".js-tab-menu"),
           tabContent = $(".js-tab-content");
+
     tabButton.on("click", function () {
         let index = tabButton.index(this);
         activateTab(index);
     });
-    function activateTabFromHash() {
-        const hash = window.location.hash;
-        if (hash) {
-            const index = tabButton.filter(hash).index();
-            if (index >= 0) {
-                activateTab(index);
-            }
+
+    function getParameterByName(name, url = window.location.href) {
+        name = name.replace(/[\[\]]/g, '\\$&');
+        const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+              results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    function activateTabFromParams() {
+        const tab = getParameterByName('tab');
+        const index = tabButton.filter(`[data-tab="${tab}"]`).index();
+        if (index >= 0) {
+            activateTab(index);
         }
     }
+
     function activateTab(index) {
         tabButton.removeClass("is-active").eq(index).addClass("is-active");
         tabContent.removeClass("is-active").eq(index).addClass("is-active");
     }
-    $(window).on('load', activateTabFromHash);
-    $(window).on('hashchange', activateTabFromHash);
+
+    $(window).on('load', activateTabFromParams);
 });
 
 
@@ -146,12 +156,7 @@ jQuery(function ($) {
   });
 
   // アコーディオン
-  $(".js-accordion__item .js-accordion__content").css(
-    "display",
-    "block"
-  );
-  $(".js-accordion__item .js-accordion__title").addClass("is-open");
-  $(".js-accordion__title").on("click", function () {
+  $(".js-accordion-title").on("click", function () {
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
   });

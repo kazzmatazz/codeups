@@ -17,6 +17,21 @@
   }
 }
 
+.blog-detail__img {
+  aspect-ratio: 345 / 231;
+  margin-top: rem(24);
+  @include mq("md") {
+    aspect-ratio: 700 / 468;
+    margin-top: rem(40);
+  }
+}
+
+.blog-detail__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .blog-detail__content {
   p {
     margin-top: rem(24);
@@ -57,21 +72,6 @@
       margin-top: rem(40);
     }
   }
-}
-
-.blog-detail__img {
-  aspect-ratio: 345 / 231;
-  margin-top: rem(24);
-  @include mq("md") {
-    aspect-ratio: 700 / 468;
-    margin-top: rem(40);
-  }
-}
-
-.blog-detail__img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 
